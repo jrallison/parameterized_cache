@@ -12,7 +12,7 @@ module ActionView
         nil
       end
       
-      def fragment_for(name, options, content)
+      def fragment_for(name, options, &block)
         if controller.fragment_exist?(name, options)
           controller.read_fragment(name, options).gsub(/____ PC: (\w+) ____/) { ParameterizedCache.get($1) }
         else
