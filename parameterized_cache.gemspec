@@ -5,7 +5,6 @@ require "parameterized_cache"
 Gem::Specification.new do |s|
   s.name        = "parameterized_cache"
   s.version     = ParameterizedCache::VERSION
-  s.platform    = ParameterizedCache::Platform::RUBY
   s.authors     = ["John Allison"]
   s.email       = ["jrallison@gmail.com"]
   s.homepage    = ""
