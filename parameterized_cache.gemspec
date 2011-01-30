@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["John Allison"]
   s.email       = ["jrallison@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Allow dynamic values for fragment caches}
+  s.description = %q{Allow dynamic values for fragment caches}
 
   s.rubyforge_project = "parameterized_cache"
 
