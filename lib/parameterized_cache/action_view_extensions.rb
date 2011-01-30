@@ -1,0 +1,1 @@
+require File.dirname(__FILE__) + "/action_view_extensions/cache_helper"
