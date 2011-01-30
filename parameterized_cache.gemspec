@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
+require "parameterized_cache"
 
 Gem::Specification.new do |s|
   s.name        = "parameterized_cache"
