@@ -8,6 +8,8 @@ module ParameterizedCacheIncludes
 end
 
 class ParameterizedCache
+  VERSION = "0.0.1"
+  
   def self.values
     @dynamic_values ||= {}
   end
