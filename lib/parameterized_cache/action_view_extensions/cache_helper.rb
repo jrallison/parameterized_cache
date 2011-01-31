@@ -1,7 +1,7 @@
 module ActionView
   module Helpers
     module CacheHelper
-      def cache(name = {}, options = nil, dynamic_vars = nil, &block)
+      def cache(name = {}, options = nil, dynamic_vars = {}, &block)
         if controller.perform_caching
           ParameterizedCache.values = dynamic_vars
           safe_concat(fragment_for(name, options, &block))
