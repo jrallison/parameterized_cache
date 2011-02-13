@@ -4,6 +4,9 @@ module ActionView
       def cache(name = {}, options = nil, dynamic_vars = {}, &block)
         if controller.perform_caching
           ParameterizedCache.values = dynamic_vars
+          dynamic_vars.keys.each do |key|
+            instance_variable_set("@#{key}", "____ PC: #{key} ____")
+          end
           safe_concat(fragment_for(name, options, &block))
         else
           yield

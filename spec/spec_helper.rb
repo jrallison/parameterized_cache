@@ -24,7 +24,6 @@ RSpec.configure do |config|
   require "rspec/expectations"
   config.include RSpec::Matchers
   config.include RSpec::Rails::HelperExampleGroup
-  config.include ParameterizedCacheIncludes
   
   config.mock_with :rspec
 end

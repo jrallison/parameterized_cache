@@ -1,11 +1,6 @@
 require 'action_view'
 
 require 'parameterized_cache/action_view_extensions'
-require 'parameterized_cache/helpers'
-
-module ParameterizedCacheIncludes
-  include DynamicValuesHelper
-end
 
 class ParameterizedCache
   VERSION = "0.0.1"
