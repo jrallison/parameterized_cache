@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'action_pack'
 
 require 'parameterized_cache/action_view_extensions'
