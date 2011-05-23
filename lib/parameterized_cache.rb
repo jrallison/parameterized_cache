@@ -1,4 +1,4 @@
-require 'action_view'
+require 'action_pack'
 
 require 'parameterized_cache/action_view_extensions'
 
