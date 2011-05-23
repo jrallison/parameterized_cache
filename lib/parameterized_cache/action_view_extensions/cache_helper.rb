@@ -14,12 +14,14 @@ module ActionView
 
         nil
       end
-      
+
       def fragment_for(name, options, &block)
         if controller.fragment_exist?(name, options)
-          controller.read_fragment(name, options).gsub(/____ PC: (\w+) ____/) { ParameterizedCache.get($1) }
+          fragment = controller.read_fragment(name, options) || ""
+          fragment.gsub(/____ PC: (\w+) ____/) { ParameterizedCache.get($1) }
         else
-          controller.write_fragment(name, capture(&block), options).gsub(/____ PC: (\w+) ____/) { ParameterizedCache.get($1) }
+          fragment = controller.write_fragment(name, capture(&block), options) || ""
+          fragment.gsub(/____ PC: (\w+) ____/) { ParameterizedCache.get($1) }
         end
       end
     end
