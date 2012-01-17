@@ -8,7 +8,7 @@ module ActionView
             instance_variable_set("@#{key}", "____PC:#{key}____")
           end
           fragment = fragment_for(name, options, &block)
-          fragment.gsub(/____PC:\w+____/) { |match| ParameterizedCache.get(match.gsub(/____|PC:/, "")) }
+          fragment.gsub!(/____PC:\w+____/) { |match| ParameterizedCache.get(match.gsub(/____|PC:/, "")) }
           safe_concat(fragment)
         else
           yield
